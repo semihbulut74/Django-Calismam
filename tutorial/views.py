@@ -1,4 +1,4 @@
 from django.shortcuts import redirect
 
-def girise_yonlendir(request):
+def login_redirect(request):
     return redirect('/account/login')

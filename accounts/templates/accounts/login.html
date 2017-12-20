@@ -1,20 +1,15 @@
 {% extends 'base.html' %}
-
-{% block head %}
-
+{% block body %}
+<div class="container">
+    <h1>Hosgeldiniz</h1>
+    <p>
+        Buraya giris yapabilirsin!
+    </p>
+    <h2>Giris</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Giris</button>
+    </form>
+</div>
 {% endblock %}
-
-{% block body%}
-    <div class="container">
-        <h1>Hosgeldiniz!</h1>
-        <p>
-            Giris Yapmak Icin!
-        </p>
-        <h2>Giris</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" name="btgiris">Giris</button>
-        </form>
-    </div>
-{% endblock%}
